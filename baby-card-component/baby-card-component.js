@@ -47,7 +47,7 @@ class BabyCardComponent extends PolymerElement {
       </style>
 
       <div class="card" style="color: [[color]];">
-        <iron-icon icon="book" class="icon mr8"></iron-icon>
+        <iron-icon icon="[[iconName]]" class="icon mr8"></iron-icon>
         <slot name="text" class="text"></slot>
         <iron-icon icon="communication:call-made" class="icon"></iron-icon>
       </div>
@@ -58,8 +58,11 @@ class BabyCardComponent extends PolymerElement {
       color: {
         type: String,
         reflectToAttribute: true,
-        notify: true,
-      }
+      },
+      iconName: {
+        type: String,
+        reflectToAttribute: true,
+      },
     };
   }
 }
