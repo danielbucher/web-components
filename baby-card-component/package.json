@@ -3,6 +3,7 @@
   "description": "A tiny card with minimal information.",
   "main": "baby-card-component.js",
   "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {

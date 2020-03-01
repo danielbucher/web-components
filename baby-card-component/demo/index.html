@@ -15,14 +15,32 @@
         body {
           background-color: lightgray;
         }
+
+        .components-wrapper {
+          display: flex;
+        }
+
+        .card-wrapper {
+          margin-right: 16px;
+        }
       </style>
     </custom-style>
   </head>
   <body>
     <h3>Basic baby-card-component demo</h3>
 
-    <baby-card-component>
-      <span slot="text">Baby card</span>
-    </baby-card-component>
+    <div class="components-wrapper">
+      <div class="card-wrapper">
+        <baby-card-component color="#0F6DFF">
+          <span slot="text">Principais tópicos (5)</span>
+        </baby-card-component>
+      </div>
+
+      <div class="card-wrapper">
+        <baby-card-component color="#D6236E">
+          <span slot="text">Habilidades BNCC (3)</span>
+        </baby-card-component>
+      </div>
+    </div>
   </body>
 </html>
