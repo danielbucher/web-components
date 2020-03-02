@@ -25,19 +25,25 @@
         }
       </style>
     </custom-style>
+
+    <script>
+      var alertOnClick = function(alertMessage) {
+        alert(alertMessage);
+      };
+    </script>
   </head>
   <body>
     <h3>Basic baby-card-component demo</h3>
 
     <div class="components-wrapper">
       <div class="card-wrapper">
-        <baby-card-component color="#0F6DFF" icon-name="book">
+        <baby-card-component color="#0F6DFF" icon-name="book" onclick="alertOnClick('5 principais tópicos')">
           <span slot="text">Principais tópicos (5)</span>
         </baby-card-component>
       </div>
 
       <div class="card-wrapper">
-        <baby-card-component color="#D6236E" icon-name="lightbulb-outline">
+        <baby-card-component color="#D6236E" icon-name="lightbulb-outline" onclick="alertOnClick('3 habilidades BNCC')">
           <span slot="text">Habilidades BNCC (3)</span>
         </baby-card-component>
       </div>
