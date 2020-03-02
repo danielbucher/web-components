@@ -34,6 +34,7 @@ class BabyCardComponent extends PolymerElement {
           align-items: center;
           padding-left: 20px;
           padding-right: 20px;
+          cursor: pointer;
         }
 
         .icon {
@@ -46,13 +47,14 @@ class BabyCardComponent extends PolymerElement {
         }
       </style>
 
-      <div class="card" style="color: [[color]];">
+      <div class="card" style="color: [[color]];" on-click="handleClick">
         <iron-icon icon="[[iconName]]" class="icon mr8"></iron-icon>
         <slot name="text" class="text"></slot>
         <iron-icon icon="communication:call-made" class="icon"></iron-icon>
       </div>
     `;
   }
+
   static get properties() {
     return {
       color: {
@@ -64,6 +66,10 @@ class BabyCardComponent extends PolymerElement {
         reflectToAttribute: true,
       },
     };
+  }
+
+  handleClick() {
+    console.log(`Clicked the baby card!`);
   }
 }
 
